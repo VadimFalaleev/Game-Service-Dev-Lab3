@@ -89,6 +89,64 @@ private void OnCollisionEnter(Collision collision)
 
 ![Видео 17-10-2022 163329](https://user-images.githubusercontent.com/54228342/196167243-849818b6-6454-412f-a274-0ce0f243310b.gif)
 
+- Перейдем к практике во втором видео. Продолжим работать с пользовательским интерфейсом, сделав счетчик очков рабочим. Вернемся в скрипт EnergyShield. Подключим новую библиотеку и добавим метод Start. Начало скрипта будет выглядить следующим образом:
+
+```c#
+
+using UnityEngine;
+using TMPro;
+
+public class EnergyShield : MonoBehaviour
+{
+    public TextMeshProUGUI scoreGT;
+
+    private void Start()
+    {
+        GameObject scoreGO = GameObject.Find("Score");
+        scoreGT = scoreGO.GetComponent<TextMeshProUGUI>();
+        scoreGT.text = "0";
+    }
+    
+    ...
+
+```
+
+- Теперь в конец метода OnCollisionEnter добавим строки, чтобы счет обновлялся при поимке яиц:
+
+```c#
+
+int score = int.Parse(scoreGT.text);
+score += 1;
+scoreGT.text = score.ToString();
+
+```
+
+- Зайдем в скрипт DragonEgg и там в методе Update добавим строки внутри условия:
+
+```c#
+
+DragonPicker apScript = Camera.main.GetComponent<DragonPicker>();
+apScript.DragonEggDestroyed();
+
+```
+
+- После этого заходим в скрипт DragonPicker, создавая новый метод:
+
+```c#
+
+public void DragonEggDestroyed()
+{
+    GameObject[] tDragonEggArray = GameObject.FindGameObjectsWithTag("Dragon Egg");
+    foreach (GameObject tGO in tDragonEggArray)
+        Destroy(tGO);
+}
+
+```
+
+- Посмотрим на результат работы после второго видео.
+
+![Видео 17-10-2022 175315](https://user-images.githubusercontent.com/54228342/196182597-fb6f8844-0a6e-4c35-bd06-be1adbe44afe.gif)
+
 ## Задание 2
 ### Используя видео-материалы практических работ 3-4 повторить реализацию игровых механик:
 
