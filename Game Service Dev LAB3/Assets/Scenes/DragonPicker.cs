@@ -16,4 +16,11 @@ public class DragonPicker : MonoBehaviour
             tShieldGo.transform.localScale = new(1 * i, 1 * i, 1 * i);
         }
     }
+
+    public void DragonEggDestroyed()
+    {
+        GameObject[] tDragonEggArray = GameObject.FindGameObjectsWithTag("Dragon Egg");
+        foreach (GameObject tGO in tDragonEggArray)
+            Destroy(tGO);
+    }
 }
