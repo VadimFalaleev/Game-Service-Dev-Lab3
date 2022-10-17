@@ -42,6 +42,52 @@
 
 Ход работы:
 
+- Реализуем движение сферы за указателем мыши. Для этого создадим скрипт EnergyShield, поставим его на объект EnergyShield и напишем следующий код.
+
+```c#
+
+using UnityEngine;
+
+public class EnergyShield : MonoBehaviour
+{
+
+    void Update()
+    {
+        Vector3 mousePos2D = Input.mousePosition;
+        mousePos2D.z = -Camera.main.transform.position.z;
+        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
+        Vector3 pos = this.transform.position;
+        pos.x = mousePos3D.x;
+        this.transform.position = pos;
+    }
+}
+
+```
+
+- Следующим шагом сделаем уничтожение яиц при столкновении со сферой. Добавим в прошлый скрипт новый метод, реализующий данные действия.
+
+```c#
+
+private void OnCollisionEnter(Collision collision)
+{
+    GameObject collided = collision.gameObject;
+    if (collided.tag == "Dragon Egg")
+        Destroy(collided);
+}
+
+```
+
+- Последним действием первого урока будет добавление интерфейса для будущего подсчета очков. Создаем объект Canvas, нажимая в списке сцены ПКМ, UI -> Text - TextMeshPro. Переименуем объект внутри Canvas на Score. В компоненте Canvas объекта Canvas поменяем Render Mode на Screen Space - Camera, и в Render Camera поставим объект Main Camera со сцены. Plane Distance изменим на 10. 
+
+![image](https://user-images.githubusercontent.com/54228342/196152589-e958f94d-428f-4142-b716-b2b3d75888c1.png)
+
+- В компоненте Rect Transform объекта Score поставим якорь на верхний правый угол, Pos X и Pos Y на -50, Width на 120, Height на 50. В комопненте TextMeshPro - Text (UI) запишем текст "Score:", а Font Size поставим на 32.
+
+![image](https://user-images.githubusercontent.com/54228342/196153473-c04ef97e-2440-43ca-bb5e-76d83a952d74.png)
+
+- После всех совершенных действий посмотрим на итог первого видео.
+
+
 
 ## Задание 2
 ### Используя видео-материалы практических работ 3-4 повторить реализацию игровых механик:
