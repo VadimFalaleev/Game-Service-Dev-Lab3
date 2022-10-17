@@ -77,7 +77,7 @@ private void OnCollisionEnter(Collision collision)
 
 ```
 
-- Последним действием первого урока будет добавление интерфейса для будущего подсчета очков. Создаем объект Canvas, нажимая в списке сцены ПКМ, UI -> Text - TextMeshPro. Переименуем объект внутри Canvas на Score. В компоненте Canvas объекта Canvas поменяем Render Mode на Screen Space - Camera, и в Render Camera поставим объект Main Camera со сцены. Plane Distance изменим на 10. 
+- Последним действием первого урока будет добавление интерфейса для будущего подсчета очков. Создаем объект Canvas, нажимая в списке сцены ПКМ, UI -> Text -> TextMeshPro. Переименуем объект внутри Canvas на Score. В компоненте Canvas объекта Canvas поменяем Render Mode на Screen Space - Camera, и в Render Camera поставим объект Main Camera со сцены. Plane Distance изменим на 10. 
 
 ![image](https://user-images.githubusercontent.com/54228342/196152589-e958f94d-428f-4142-b716-b2b3d75888c1.png)
 
@@ -87,7 +87,7 @@ private void OnCollisionEnter(Collision collision)
 
 - После всех совершенных действий посмотрим на итог первого видео.
 
-
+![Видео 17-10-2022 163329](https://user-images.githubusercontent.com/54228342/196167243-849818b6-6454-412f-a274-0ce0f243310b.gif)
 
 ## Задание 2
 ### Используя видео-материалы практических работ 3-4 повторить реализацию игровых механик:
