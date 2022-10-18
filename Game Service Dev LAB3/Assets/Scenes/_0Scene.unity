@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4468cf691a0d9e74183ca9beb3c7c990, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.16356903, g: 0.3605678, b: 0.5079261, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -249,6 +249,77 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: cf931ba04c2f16145a867d204e99ea68, type: 3}
+--- !u!1001 &399112479
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 162790, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_Name
+      value: DragonMountain
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.52747965
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.081281774
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8441438
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.050790496
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 400386, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 341e7e94562105443a91ba8f5ab28682, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +515,7 @@ MonoBehaviour:
   numEnergyShield: 3
   energyShieldBottomY: -6
   energyShieldRadius: 1.5
+  shieldList: []
 --- !u!1 &1413273023
 GameObject:
   m_ObjectHideFlags: 0
